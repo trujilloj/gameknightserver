@@ -12,8 +12,8 @@ module.exports = {
         return database('member').insert(member, '*').then(record => record[0]);
 
     },
-    update(partyCode, member) {
-        return database('member').where('partyCode', partyCode).update(member, '*');
+    update(id, member) {
+        return database('member').where('id', id).update(member, '*');
 
     },
     delete(partyCode) {

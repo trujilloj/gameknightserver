@@ -40,8 +40,8 @@ router.delete("/:partyCode", (request, response, next) => {
     }).catch(next);
 });
 
-router.put("/:partyCode", (request, response, next) => {
-    queries.update(request.params.partyCode, request.body).then(member => {
+router.put("/:id", (request, response, next) => {
+    queries.update(request.params.id, request.body).then(member => {
         response.json({
             member
         });
